@@ -1,0 +1,105 @@
+@import "../../../node_modules/normalize.css/normalize";
+@import "../utils/vars";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: $globalFont;
+
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  line-height: $globalLineHeight;
+}
+
+body {
+  min-width: 320px;
+  background-color: $globalBg;
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+section, article, aside, details, figcaption, figure,
+footer, header, menu, nav, section, blockquote {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+button,
+textarea {
+  box-shadow: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+}
+
+abbr,
+acronym {
+  border: 0
+}
