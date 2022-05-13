@@ -5,12 +5,12 @@
 
 #### Development
 
-- > gulp
+- > npm run dev
 
 #### Add fonts
 
 - > if otf font convert to ttf
-- > add ttf fonts to src/fontss
+- > add ttf fonts to src/fonts
 - > gulp
 - > uncomment @import "fonts" from src/scss/_index.scss
 
@@ -18,3 +18,11 @@
 
 - > gulp/tasks/server.js -> port: 4200
 - > http://localhost:4200/
+
+#### Create zip
+
+- > npm run zip
+
+#### Build
+
+- > npm run build

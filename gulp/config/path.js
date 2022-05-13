@@ -9,21 +9,21 @@ export const path = {
     html: `${buildFolder}/`,
     css: `${buildFolder}/css/`,
     js: `${buildFolder}/js/`,
-    images: `${buildFolder}/images/`,
+    images: `${buildFolder}/img/`,
     fonts: `${buildFolder}/fonts/`
   },
   src: {
     html: `${srcFolder}/*.html`,
     scss: `${srcFolder}/scss/styles.scss`,
     js: `${srcFolder}/js/app.js`,
-    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
-    svg: `${srcFolder}/images/**/*.svg`
+    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${srcFolder}/img/**/*.svg`
   },
   watch: {
     html: `${srcFolder}/**/*.html`,
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
-    images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,webp}`
+    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,webp}`
   },
   clean: buildFolder,
   buildFolder,
