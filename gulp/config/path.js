@@ -18,7 +18,8 @@ export const path = {
     js: `${srcFolder}/js/app.js`,
     allJs: `${srcFolder}/js/**/*.js`,
     images: `${srcFolder}/img/**/*.*`,
-    svg: `${srcFolder}/img/**/*.svg`
+    svg: `${srcFolder}/img/**/*.svg`,
+    fonts: `${srcFolder}/fonts/`
   },
   watch: {
     html: `${srcFolder}/**/*.html`,
