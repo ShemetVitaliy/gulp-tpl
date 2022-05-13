@@ -26,3 +26,8 @@
 #### Build
 
 - > npm run build
+
+#### Deploy to FTP
+
+- > Add config to gulp/config/ftp.js
+- > npm run deploy
