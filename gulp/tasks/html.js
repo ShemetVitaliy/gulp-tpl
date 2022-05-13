@@ -1,5 +1,4 @@
 import fileInclude from 'gulp-file-include';
-import webpHtmlNoSvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 
 export const html = () => {
@@ -11,12 +10,6 @@ export const html = () => {
       })
     ))
     .pipe(fileInclude())
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        webpHtmlNoSvg()
-      )
-    )
     .pipe(
       app.plugins.if(
         app.isBuild,

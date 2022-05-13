@@ -1,4 +1,4 @@
-import concat from "gulp-concat";
+import concat from 'gulp-concat';
 import webpack from 'webpack-stream';
 
 export const scripts = () => {
@@ -6,8 +6,8 @@ export const scripts = () => {
     'node_modules/jquery/dist/jquery.min.js'
   ])
     .pipe(concat('libs.min.js'))
-    .pipe(app.gulp.dest('src/js'))
-    .pipe(app.gulp.dest('dist/js'));
+    .pipe(app.gulp.src(app.path.src.allJs))
+    .pipe(app.gulp.dest(app.path.build.js));
 };
 
 export const js = () => {

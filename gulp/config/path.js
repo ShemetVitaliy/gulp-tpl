@@ -16,14 +16,15 @@ export const path = {
     html: `${srcFolder}/*.html`,
     scss: `${srcFolder}/scss/*.scss`,
     js: `${srcFolder}/js/app.js`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    allJs: `${srcFolder}/js/**/*.js`,
+    images: `${srcFolder}/img/**/*.*`,
     svg: `${srcFolder}/img/**/*.svg`
   },
   watch: {
     html: `${srcFolder}/**/*.html`,
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,webp}`
+    images: `${srcFolder}/img/**/*.*`
   },
   clean: buildFolder,
   buildFolder,
