@@ -1,12 +1,18 @@
+/* SERVICE VARS */
+$containerPaddingNum: 15;
+$maxWidthMum: 1200;
+/* COLORS */
+$whiteColor: #fff;
+$blackColor: #000;
+/* GLOBAL */
+$maxWidth: $maxWidthMum + ($containerPaddingNum * 2) + px;
+$containerPadding: $containerPaddingNum + px;
 /* FONTS */
 
-/* COLORS */
-$whiteColor: #ffffff;
-// Media
-$desktop: 1024px;
-$tablet: 1023px;
+/* MEDIA */
+$tablet: 1024px;
 $phone: 767px;
-// Other
+/* OTHER */
 $transition: all ease 0.15s;
 $imgPath: '../img/';
 $fontPath: '../fonts/';

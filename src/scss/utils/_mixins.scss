@@ -1,3 +1,5 @@
+@import "vars";
+
 /* COMMON */
 @mixin placeholder {
   &::-webkit-input-placeholder {
@@ -43,3 +45,17 @@
 }
 
 // @include scrollbar(red, blue, green, 0);
+
+@mixin adaptiveFont($desktopSize, $mobileSize) {
+  $addSize: $desktopSize - $mobileSize;
+  $addMobSize: $desktopSize + $mobileSize * .7;
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobileSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidthMum}));
+  }
+  @media (min-width: 768px) {
+    font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$maxWidthMum}));
+  }
+  @media (min-width: #{$maxWidthMum + px}) {
+    font-size: #{$desktopSize + px};
+  }
+}
