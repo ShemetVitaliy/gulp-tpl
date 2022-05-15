@@ -1,5 +1,6 @@
 import fileInclude from 'gulp-file-include';
 import versionNumber from 'gulp-version-number';
+import gulpHtmlMin from 'gulp-htmlmin';
 
 export const html = () => {
   return app.gulp.src(app.path.src.html)
@@ -23,6 +24,15 @@ export const html = () => {
           'output': {
             'file': 'gulp/version.json'
           }
+        })
+      )
+    )
+    .pipe(
+      app.plugins.if(
+        app.isBuild,
+        gulpHtmlMin({
+          collapseWhitespace: true,
+          removeComments: true
         })
       )
     )

@@ -8,37 +8,22 @@ export const images = () => {
         message: 'Error <%= error.message %>'
       }))
     )
-    .pipe(app.plugins.newer(app.path.build.images))
     .pipe(
       app.plugins.if(
         app.isBuild,
-        app.gulp.dest(app.path.build.images)
+        imageMin([
+          imageMin.gifsicle({ interlaced: true }),
+          imageMin.mozjpeg({ quality: 70, progressive: true }),
+          imageMin.optipng({ optimizationLevel: 5 }),
+          imageMin.svgo({
+            plugins: [
+              { removeViewBox: true },
+              { cleanupIDs: false }
+            ]
+          })
+        ])
       )
     )
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        app.gulp.src(app.path.src.images)
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        app.plugins.newer(app.path.build.images)
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        imageMin({
-          progressive: true,
-          svgoPlugins: [{ removeViewBox: false }],
-          interlaced: true,
-          optimizationLevel: 3
-        })
-      )
-    )
-    .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.gulp.src(app.path.src.svg))
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browserSync.stream());
