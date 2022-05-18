@@ -8,9 +8,9 @@ import { html } from './gulp/tasks/html.js';
 import { scss } from './gulp/tasks/scss.js';
 import { server } from './gulp/tasks/server.js';
 import { scripts, js } from './gulp/tasks/js.js';
-import { zip } from "./gulp/tasks/zip.js";
-import { destFonts } from "./gulp/tasks/fonts.js";
-import { ftp } from "./gulp/tasks/ftp.js";
+import { zip } from './gulp/tasks/zip.js';
+import { destFonts } from './gulp/tasks/fonts.js';
+import { ftp } from './gulp/tasks/ftp.js';
 import { images } from './gulp/tasks/images.js';
 
 global.app = {

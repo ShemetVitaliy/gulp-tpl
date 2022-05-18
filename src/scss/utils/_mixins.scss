@@ -5,21 +5,24 @@
   &::-webkit-input-placeholder {
     @content;
   }
+
   &::-moz-placeholder {
     opacity: 1;
     @content;
   }
+
   &:-moz-placeholder {
     opacity: 1;
     @content;
   }
+
   &:-ms-input-placeholder {
     opacity: 1;
     @content;
   }
 }
 
-// @include placeholder {color: red};
+/* @include placeholder {color: red}; */
 
 @mixin scrollbar($color, $color-line, $trackColor, $width) {
   &::-webkit-scrollbar {
@@ -44,18 +47,4 @@
   }
 }
 
-// @include scrollbar(red, blue, green, 0);
-
-@mixin adaptiveFont($desktopSize, $mobileSize) {
-  $addSize: $desktopSize - $mobileSize;
-  $addMobSize: $desktopSize + $mobileSize * .7;
-  @media (max-width: 767px) {
-    font-size: calc(#{$mobileSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidthMum}));
-  }
-  @media (min-width: 768px) {
-    font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$maxWidthMum}));
-  }
-  @media (min-width: #{$maxWidthMum + px}) {
-    font-size: #{$desktopSize + px};
-  }
-}
+/* @include scrollbar(red, blue, green, 0); */

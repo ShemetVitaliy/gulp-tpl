@@ -6,5 +6,5 @@ export const server = () => {
     notify: false,
     open: true,
     port: 4200
-  })
+  });
 };

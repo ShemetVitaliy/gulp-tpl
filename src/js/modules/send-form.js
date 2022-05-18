@@ -1,12 +1,12 @@
-$('.send-form').submit(function() {
+$('.send-form').submit(function () {
   const th = $(this);
   $.ajax({
     type: 'POST',
     url: '../mail.php',
     data: th.serialize()
-  }).done(function() {
+  }).done(function () {
     $('.thanks-message').addClass('open');
-    setTimeout(function() {
+    setTimeout(function () {
       $('.thanks-message').removeClass('open');
       th.trigger('reset');
     }, 3000);

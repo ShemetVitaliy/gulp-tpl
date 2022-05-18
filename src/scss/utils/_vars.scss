@@ -1,23 +1,27 @@
 /* SERVICE VARS */
 $containerPaddingNum: 15;
 $maxWidthMum: 1200;
+
 /* COLORS */
 $whiteColor: #fff;
 $blackColor: #000;
+
 /* GLOBAL */
 $maxWidth: $maxWidthMum + ($containerPaddingNum * 2) + px;
 $containerPadding: $containerPaddingNum + px;
+
 /* FONTS */
 
 /* MEDIA */
 $tablet: 1024px;
 $phone: 767px;
+
 /* OTHER */
 $transition: all ease 0.15s;
-$imgPath: '../img/';
-$fontPath: '../fonts/';
+$imgPath: "../img/";
+$fontPath: "../fonts/";
 
 /* PROJECT SETTINGS */
 $globalBg: $whiteColor;
 $globalLineHeight: 1.45;
-$globalFont: 'Ideal-Gothic-Bold', sans-serif;
+$globalFont: "Ideal-Gothic-Bold", sans-serif;

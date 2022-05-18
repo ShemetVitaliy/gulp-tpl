@@ -1,12 +1,15 @@
 import imageMin from 'gulp-imagemin';
 
 export const images = () => {
-  return app.gulp.src(app.path.src.images)
-    .pipe(app.plugins.plumber(
-      app.plugins.notify.onError({
-        title: 'IMAGES',
-        message: 'Error <%= error.message %>'
-      }))
+  return app.gulp
+    .src(app.path.src.images)
+    .pipe(
+      app.plugins.plumber(
+        app.plugins.notify.onError({
+          title: 'IMAGES',
+          message: 'Error <%= error.message %>'
+        })
+      )
     )
     .pipe(
       app.plugins.if(
@@ -16,10 +19,7 @@ export const images = () => {
           imageMin.mozjpeg({ quality: 70, progressive: true }),
           imageMin.optipng({ optimizationLevel: 5 }),
           imageMin.svgo({
-            plugins: [
-              { removeViewBox: true },
-              { cleanupIDs: false }
-            ]
+            plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
           })
         ])
       )
