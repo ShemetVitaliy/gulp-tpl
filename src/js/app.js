@@ -1,4 +1,3 @@
-$(document).ready(() => {
-  // sendForm.sendForm();
-  console.log('document ready');
+$(document).on('ready', () => {
+  console.log('111');
 });

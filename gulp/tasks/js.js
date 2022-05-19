@@ -1,5 +1,6 @@
 import concat from 'gulp-concat';
 import webpack from 'webpack-stream';
+import eslint from 'gulp-eslint';
 
 export const scripts = () => {
   return app.gulp
@@ -20,6 +21,17 @@ export const js = () => {
         })
       )
     )
+    .pipe(eslint({
+      "globals": [
+        "jQuery",
+        "$"
+      ],
+      parserOptions: {
+        "ecmaVersion": 2020
+      }
+    }))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
     .pipe(
       webpack({
         mode: app.isBuild ? 'production' : 'development',
