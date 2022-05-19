@@ -21,15 +21,14 @@ export const js = () => {
         })
       )
     )
-    .pipe(eslint({
-      "globals": [
-        "jQuery",
-        "$"
-      ],
-      parserOptions: {
-        "ecmaVersion": 2020
-      }
-    }))
+    .pipe(
+      eslint({
+        globals: ['jQuery', '$'],
+        parserOptions: {
+          ecmaVersion: 2020
+        }
+      })
+    )
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
     .pipe(
