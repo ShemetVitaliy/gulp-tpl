@@ -10,7 +10,7 @@
 #### Start server on the 4200 port
 
 - > gulp/tasks/server.js -> port: 4200
-- > http://localhost:4200/
+- > http://localhost:4200/ss
 
 #### Create zip
 

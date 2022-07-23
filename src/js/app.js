@@ -1,3 +1,3 @@
-$(document).on('ready', () => {
-  console.log('111');
+$(document).ready(() => {
+  console.log('1231231231231232');
 });

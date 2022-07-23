@@ -5,7 +5,8 @@ import eslint from 'gulp-eslint';
 export const scripts = () => {
   return app.gulp
     .src(['node_modules/jquery/dist/jquery.min.js'])
-    .pipe(concat('libs.min.js'))
+    .pipe(concat('libs.js'))
+    .pipe(app.plugins.minify())
     .pipe(app.gulp.src(app.path.src.allJs))
     .pipe(app.gulp.dest(app.path.build.js));
 };
