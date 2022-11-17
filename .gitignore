@@ -5,7 +5,6 @@
 *.log
 /.git/
 /src/css/*css
-package-lock.json
 /**/*.psd
 /**/Thumbs.db
 .sass-cache/

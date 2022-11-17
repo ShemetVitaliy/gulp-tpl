@@ -1,3 +1,3 @@
 $(document).ready(() => {
-  console.log('1231231231231232');
+  console.log('test');
 });
