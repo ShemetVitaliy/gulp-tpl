@@ -8,3 +8,5 @@
 /**/*.psd
 /**/Thumbs.db
 .sass-cache/
+gulp/version.json
+/**/.DS_Store
